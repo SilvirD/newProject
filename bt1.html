@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính tuổi</title>
+  </head>
+  <body>
+    <h1>Tính tuổi</h1>
+  </body>
+
+  <script>
+    let dob = prompt("Nhập năm sinh của bạn: ");
+    dob = Number(dob);
+    console.log("Năm sinh của bạn: " + dob);
+    
+    let curYear = new Date().getFullYear();
+    console.log("Năm nay: " + curYear);
+
+    let age = curYear - dob;
+    console.log("Bạn " + age + " tuổi");
+
+    alert("Bạn " + age + " tuổi");
+    
+    //String literal: có thể chèn 1 variable hoặc 1 statement
+    alert(`Bạn đã ${2021-dob} tuổi`);
+    alert(`Bạn đẻ năm ${dob}`)
+  </script>
+</html>

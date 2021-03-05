@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Số phần trăm học sinh</title>
+  </head>
+  <body></body>
+
+  <script>
+    let boy = Number(prompt("Nhập số nam: "));
+
+    let girl = Number(prompt("Nhập số nữ: "));
+
+    let all = boy + girl;
+
+    let boyPer = ((boy / all) * 100).toFixed(2); //làm tròn đến sau dấu phẩy
+    // perBoy = Math.round(perBoy); //làm tròn đến số nguyên gần nhất
+    let girlPer = ((girl / all) * 100).toFixed(2);
+ 
+    console.log(`HS nam chiếm ${boyPer}% toàn lớp`)
+    console.log(`Hs nữ chiếm ${((girl / all) * 100).toFixed(2)}% toàn lớp`)
+
+    
+  </script>
+</html>
