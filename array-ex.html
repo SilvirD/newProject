@@ -1,0 +1,40 @@
+<html>
+  <script>
+    let product = ["T-Shirt", "Sweater"];
+
+    let cmd = prompt("Welcome to our shop, what do you want (C, R, U, D)?");
+
+    if (cmd === "c" || cmd === "C") {
+      let newProd = prompt("Enter new item");
+
+      product.push(newProd);
+
+      console.log(`Our items: `, product.join(", ").toString());
+    } else if (cmd === "r" || cmd === "R") {
+      console.log(`Our items: `, product.join(", ").toString());
+    } else if (cmd === "u" || cmd === "U") {
+      let updPos = prompt("Update position?");
+      updPos = Number(updPos);
+
+      if (updPos <= product.length - 1) {
+        let updProd = prompt("New product?");
+        product[updPos] = updProd;
+        console.log(`Our items: `, product.join(", ").toString());
+      } else {
+        alert("We don't have that!");
+      }
+    } else if (cmd === "d" || cmd === "D") {
+      let delPos = prompt("Delete position?");
+      delPos = Number(delPos);
+
+      if (delPos <= product.length - 1) {
+        product.splice(delPos,1)
+        console.log(`Our items: `, product.join(", ").toString());
+      } else {
+        alert("We don't have that!");
+      }
+    } else {
+      alert("Invalid command!");
+    }
+  </script>
+</html>
